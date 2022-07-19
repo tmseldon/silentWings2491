@@ -8,7 +8,7 @@ _Silent Wings 2491 is a lite scrolling shoot'em up with some roguelike elements.
 
 ![](https://img.itch.zone/aW1nLzk0NzEzOTMuZ2lm/original/WYx4nt.gif)
 
-I kept a devlog on the itch site of this game. These are the entries that I have woritten so far:
+I have been keeping a devlog on itch.io. These are the entries that I have written so far:
 
 - [Final implementation and playable demo!](https://tmseldon.itch.io/silentwings-2491/devlog/405077/final-implementation-and-playable-demo)
 - [Demo version playable!](https://tmseldon.itch.io/silentwings-2491/devlog/404804/demo-version-playable)
