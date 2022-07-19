@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 738fe5bb4e388bf4580fc03d522a3cc3, type: 3}
+  m_Name: PerkLevelsData
+  m_EditorClassIdentifier: 
+  _listOfBuffs:
+  - PerksName: 1
+    AddedValuePerLevel:
+    - 0.1
+    - 0.15
+    - 0.25
+    - 1
+    - 1
+  - PerksName: 4
+    AddedValuePerLevel:
+    - 0.25
+    - 1
+    - 2
+    - 3
+    - 3
+  - PerksName: 5
+    AddedValuePerLevel:
+    - 1
+    - 1
+    - 2
+    - 3
+    - 3
+  - PerksName: 6
+    AddedValuePerLevel:
+    - 1
+    - 1
+    - 2
+    - 3
+    - 3

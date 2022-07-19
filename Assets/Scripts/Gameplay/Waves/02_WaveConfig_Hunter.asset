@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269557be09358fa4290a0e4f81e89ab0, type: 3}
+  m_Name: 02_WaveConfig_Hunter
+  m_EditorClassIdentifier: 
+  _listPaths:
+  - {fileID: 3076748069647893472, guid: 9f489bd7d41efc443a29eabd1eb9af37, type: 3}
+  _levelsData: {fileID: 11400000, guid: c32bbff8d7db2e84f99b3720e47227d2, type: 2}
+  _typeAirplane: 2
+  _levelAirplane: 2
+  _isWaypointBased: 0
+  _numberEnemies: 3
+  _timeBetweenSpawn: 1.5
+  _rangeRandomtime: 0.2

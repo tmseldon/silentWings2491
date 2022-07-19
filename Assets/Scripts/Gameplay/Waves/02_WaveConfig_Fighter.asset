@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269557be09358fa4290a0e4f81e89ab0, type: 3}
+  m_Name: 02_WaveConfig_Fighter
+  m_EditorClassIdentifier: 
+  _listPaths:
+  - {fileID: 2308388417153331940, guid: b15399659c9230d4b8a1c022dcc18a65, type: 3}
+  - {fileID: 7971600640853550169, guid: 2344790d44623834dafdf39c0b7cd6d2, type: 3}
+  _levelsData: {fileID: 11400000, guid: c32bbff8d7db2e84f99b3720e47227d2, type: 2}
+  _typeAirplane: 1
+  _levelAirplane: 1
+  _isWaypointBased: 1
+  _numberEnemies: 4
+  _timeBetweenSpawn: 1.5
+  _rangeRandomtime: 0.3

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb7a52d187f6d94aa77754e1b8736c2, type: 3}
+  m_Name: InitialDataPlayer
+  m_EditorClassIdentifier: 
+  _infoStatusAirplane:
+  - Type: 0
+    Attributes:
+    - Stats: 0
+      levels:
+      - 1
+    - Stats: 1
+      levels:
+      - 15
+    - Stats: 4
+      levels:
+      - 2
+    - Stats: 5
+      levels:
+      - 3
+    - Stats: 6
+      levels:
+      - 3
+    - Stats: 7
+      levels:
+      - 0
