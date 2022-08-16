@@ -60,6 +60,7 @@ namespace Game.Gameplay
         {
             if(_isHunterSetting)
             {
+                //Randomize initial spawning point
                 float randomPoint = UnityEngine.Random.Range(0f, 1f);
                 Vector3 appearingPos = Vector3.Lerp(_waypoints[0].position, _waypoints[1].position, randomPoint);
                 transform.position = appearingPos;
@@ -69,6 +70,8 @@ namespace Game.Gameplay
                 transform.rotation = Quaternion.LookRotation(_determinePlayerDirection);
                 _isHunterSetting = false;
             }
+            //Hunt player based on the _determinePlayerDirection
+            //It does not hunt all the time, just based on that position at the spawning moment
             transform.position +=  _determinePlayerDirection * _speedMovement * Time.deltaTime;
         }
 

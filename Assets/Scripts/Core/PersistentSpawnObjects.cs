@@ -5,22 +5,24 @@ using UnityEngine;
 
 namespace Game.Core
 {
+    //Singleton implementation
+    //The different systems that should not be destroyed are child objects of _persistantObjectPrefab
     public class PersistentSpawnObjects : MonoBehaviour
     {
-        [SerializeField] GameObject persistentObjectPrefab;
+        [SerializeField] GameObject _persistentObjectPrefab;
 
-        static bool hasSpawned = false;
+        static bool _hasSpawned = false;
         private void Awake()
         {
-            if (hasSpawned) return;
+            if (_hasSpawned) return;
 
             SpawnPersistantObjects();
-            hasSpawned = true;
+            _hasSpawned = true;
         }
 
         private void SpawnPersistantObjects()
         {
-            GameObject persistantObject = Instantiate(persistentObjectPrefab);
+            GameObject persistantObject = Instantiate(_persistentObjectPrefab);
             DontDestroyOnLoad(persistantObject);
         }
     }

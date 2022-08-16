@@ -151,6 +151,7 @@ namespace Game.Gameplay
             _totalNumberDashes = _initialData.GetStat(BasicStats.dash, AirplanesTypes.player, 1);
         }
 
+        //Perks/Buff based on number
         public void AddMoves(BasicStats stat, float addNumberMoves)
         {
             switch (stat)
@@ -205,6 +206,7 @@ namespace Game.Gameplay
             //Check if there are available stunts
             if(_currentNumberStunts <= 0) { return; }
 
+            //Vector for rotation
             _offsetUp = transform.position + Vector3.up * _offsetStunt;
             SetBorderMoveConditions(true, out _isStunt);
 
@@ -238,7 +240,8 @@ namespace Game.Gameplay
         {
             _playerAirplaneInput.DeactivateInput();
         }
-
+        
+        //Deactivate or activate player control for special movements
         private void SetBorderMoveConditions(bool status, out bool moveState)
         {
             moveState = status;

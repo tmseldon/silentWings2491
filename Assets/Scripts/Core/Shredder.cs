@@ -10,6 +10,7 @@ namespace Game.Core
     {
         AirplanesTypes typeObject;
 
+        //Shredder deactivate bullets and enemies airplanes when they cross limit regions
         private void OnTriggerEnter(Collider other)
         {    
             if(other.gameObject.CompareTag("Bullet"))

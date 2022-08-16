@@ -31,6 +31,12 @@ namespace Game.Stats
                 _perksAvailableTable.Add(buff.PerksName, valueQueue);
             }
         }
+
+        public void ResetTableOfPerks()
+        {
+            _perksAvailableTable.Clear();
+            BuildTableOfPerks();
+        }
     }
 
     [System.Serializable]

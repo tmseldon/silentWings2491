@@ -10,12 +10,13 @@ namespace Game.Control
     {
         TMP_Dropdown _resolutionsOptions; 
         
-        // Start is called before the first frame update
         void Start()
         {
             _resolutionsOptions = GetComponent<TMP_Dropdown>();
             _resolutionsOptions.onValueChanged.AddListener(delegate { ResolutionSelection(_resolutionsOptions.value); });
-            //Mismo resultado, otra notacion con lambda
+            
+            //Same result with lambda notation
+            //Saved here to future references
             //_resolutionsOptions.onValueChanged.AddListener((x) => Testing(_resolutionsOptions.value));
         }
 

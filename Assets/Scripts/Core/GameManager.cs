@@ -15,11 +15,15 @@ namespace Game.Core
         [SerializeField] Canvas _gameOverScreen;
         [SerializeField] Canvas _endGameScreen;
 
+        //Level information
         public float SecondsPerRound { get { return _secondsPerround; } }
 
+        //Events for subscription
         public event Action<int> GoingToNextLevel;
         public event Action StartGame;
         public event Action StopGame;
+        
+        //Game status and controllers
         public bool IsGameOver { get { return _isGameOver; } }
 
         private int _currentLevel = 1;
@@ -56,6 +60,7 @@ namespace Game.Core
 
         private void InitiateWave()
         {
+            //Start initial wave
             StartGame();
             ToogleSystems(true);
             StartCoroutine(TimerCountDown());
@@ -63,6 +68,9 @@ namespace Game.Core
 
         private IEnumerator TimerCountDown()
         {
+            //This timer sets up the level duration
+            //Each level's duration is time based
+
             yield return _timerCountDown;
             StopGame();
             if (_currentLevel == _enemySpawner.NumberOfWaves)
@@ -87,7 +95,7 @@ namespace Game.Core
             _gameOverScreen.enabled = true;
             StopAllCoroutines();
             ToogleSystems(false);
-            //llama a todos los suscriptores (Spawner y otros?)
+            //Call all the subscribers
             StopGame();
         }
 

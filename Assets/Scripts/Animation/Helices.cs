@@ -16,6 +16,7 @@ namespace Game.Animation
             _rotationVector = new Vector3(_angleRotation * _speedRotation, 0f, 0f);
         }
 
+        //animation of the propeller based on the velocity set on Awake
         void Update()
         {
             transform.Rotate(_rotationVector * Time.deltaTime);

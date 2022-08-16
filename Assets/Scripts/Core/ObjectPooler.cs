@@ -17,6 +17,8 @@ namespace Game.Core
 
         void Awake()
         {
+            //Setting up ObjectPooler as static and create pool of objects 
+            //based on params
             SharedInstance = this;
             foreach (ObjectPoolGroup group in _infoGroups)
             {
@@ -30,6 +32,8 @@ namespace Game.Core
 
             for(int index = 0; index < group.AmountToPool; index++)
             {
+                //randomize objects selection to add diversity
+                //this is only model wise
                 int randomIndex = UnityEngine.Random.Range(0, group.ObjectsToPool.Length);
                 GameObject objectSelected = Instantiate(group.ObjectsToPool[randomIndex]);
                 objectSelected.SetActive(false);

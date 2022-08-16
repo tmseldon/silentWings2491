@@ -5,6 +5,8 @@ using UnityEngine;
 
 namespace Game.Animation
 {
+    //Landscape Scroller for the level
+    //Here is where is calculated the movemnet of the terrain based on time duration of level
     public class Scroller : MonoBehaviour
     {
         [SerializeField] float _distanceToMove = 460f;
@@ -19,6 +21,7 @@ namespace Game.Animation
         
         private void Awake()
         {
+            //Need params to determine speed of the scroller based on duration (seconds) of the level
             _gameManager = FindObjectOfType<GameManager>();
 
             _secondsPerRound = _gameManager.SecondsPerRound;
@@ -28,6 +31,8 @@ namespace Game.Animation
             _lastPos = new Vector3(0f, _initialPos.y, -1 * _distanceToMove);
         }
 
+        //Subscribe to notifications of game's events
+        //Based on events it change the scroller status
         private void OnEnable()
         {
             _gameManager.StartGame += StartScrolling;
@@ -50,6 +55,7 @@ namespace Game.Animation
             }
         }
 
+        //Scrollers status
         private void StartScrolling()
         {
             _isScrolling = true; 

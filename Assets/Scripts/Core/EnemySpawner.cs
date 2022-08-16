@@ -24,6 +24,7 @@ namespace Game.Core
             _gameManager = GetComponent<GameManager>();
         }
 
+        //Subscriptions to game's events
         private void OnEnable()
         {
             _gameManager.GoingToNextLevel += UpdateCurrentLevel;
@@ -38,6 +39,7 @@ namespace Game.Core
             _gameManager.StopGame -= StopSpawning;
         }
 
+        //Set new level and start spawning enemies
         private void UpdateCurrentLevel(int level)
         {
             _currentLevel = level;

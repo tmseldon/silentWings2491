@@ -52,8 +52,10 @@ namespace Game.UI
             float[] valuesBonus = new float[_perkManagerController.NumberSkillsAtEnd];
             BasicStats[] nameBonusList = new BasicStats[_perkManagerController.NumberSkillsAtEnd];
 
+            //Determine random perks to show on screen
             nameBonusList = _perkManagerController.GetRandomAvailablePerks(out valuesBonus);
-
+            
+            //Set each button with the random perks
             for (int index = 0; index < _perkManagerController.NumberSkillsAtEnd; index++)
             {
                 _lookUpTablePerks[index] = nameBonusList[index];
@@ -65,6 +67,7 @@ namespace Game.UI
 
         public void ProcessButtonClick(int numberButton)
         {
+            //Based on the selected perks it adds new number or percentage to the player stack
             if (_lookUpTablePerks[numberButton] == BasicStats.stunt || _lookUpTablePerks[numberButton] == BasicStats.dash)
             {
                 ProcessMovementsSelection(_lookUpTablePerks[numberButton], _lookUpTableValues[numberButton]);
@@ -74,7 +77,7 @@ namespace Game.UI
                 ProcessStatsSelection(_lookUpTablePerks[numberButton], _lookUpTableValues[numberButton]);
             }
 
-            //llamar seguir siguiente etapa
+            //call next level
             _gameManager.StartNextLevel();
             TurnOnSkillSelector(false);
         }
@@ -82,12 +85,14 @@ namespace Game.UI
         private void ProcessStatsSelection(BasicStats perkSelection, float valueSelection)
         {
             _playerPlane.AddPercentage(perkSelection, valueSelection);
+            //Removes the perk of the list, so the next time it shows the next perk level
             _perkManagerController.RemoveSelectedPerk(perkSelection, valueSelection);
         }
 
         private void ProcessMovementsSelection(BasicStats perkSelection, float valueSelection)
         {
             _playerMovement.AddMoves(perkSelection, valueSelection);
+            //Removes the perk of the list, so the next time it shows the next perk level
             _perkManagerController.RemoveSelectedPerk(perkSelection, valueSelection);
         }
 

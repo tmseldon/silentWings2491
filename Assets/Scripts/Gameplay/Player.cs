@@ -16,9 +16,9 @@ namespace Game.Gameplay
         [SerializeField] AudioClip _explotionSoundFX;
         [SerializeField] Material _hitMaterial;
         
-
         public event Action OnPlayerDeath;
 
+        //Player params
         private float _healthPlayer;
         private float _armorPoints;
         private float _currentHealthPlayer;
@@ -26,6 +26,7 @@ namespace Game.Gameplay
         private bool _isInvincible = false;
         private float _timeHitFX = 0.2f;
 
+        //Components
         private AudioSource _playerAudioSource;
         private Renderer _playerRenderer;
         private Material _initialMaterial;
@@ -47,6 +48,7 @@ namespace Game.Gameplay
             _playerAudioSource = GetComponent<AudioSource>();
             _playerRenderer = GetComponent<Renderer>();
 
+            //Setting up material and params
             _initialMaterial = _playerRenderer.material;
             _timeHitWait = new WaitForSeconds(_timeHitFX);
             SetUpInitialData();
@@ -65,6 +67,7 @@ namespace Game.Gameplay
             _playerHud.UpdateAll();
         }
 
+        //Perks/Buff based on percentage
         public void AddPercentage(BasicStats stat, float percentage)
         {
             switch (stat)
@@ -147,6 +150,7 @@ namespace Game.Gameplay
             }
         }
 
+        //FX when hit
         private IEnumerator HitChangeColor()
         {
             _playerRenderer.material = _hitMaterial;
@@ -157,13 +161,13 @@ namespace Game.Gameplay
 
         private IEnumerator PlayerDie()
         {
-            //Se termina el juego
+            //Game Over
             Instantiate(_explotionFX, transform.position, Quaternion.identity);
             _playerAudioSource.clip = _explotionSoundFX;
             _playerAudioSource.Play()
 ;
             yield return new WaitForSeconds(1.5f);
-            //llama a GameManager
+            //Call GameManager
             OnPlayerDeath();
         }
     }

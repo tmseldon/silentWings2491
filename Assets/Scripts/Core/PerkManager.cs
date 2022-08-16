@@ -15,6 +15,8 @@ namespace Game.Core
 
         private void OnEnable()
         {
+            //In case of reload scene, perkData is reset and built again
+            _perksData.ResetTableOfPerks();
             _perksAvailableList = _perksData.PerksAvailableTable;
         }
 
