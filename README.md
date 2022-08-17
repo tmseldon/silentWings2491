@@ -10,7 +10,7 @@ _Silent Wings 2491 is a lite scrolling shoot'em up with some roguelike elements.
 
 I have been keeping a devlog on itch.io. These are the entries that I have written so far:
 
-- [Fixed small bug] (https://tmseldon.itch.io/silentwings-2491/devlog/416985/fixed-small-bug)
+- [Fixed small bug](https://tmseldon.itch.io/silentwings-2491/devlog/416985/fixed-small-bug)
 - [Final implementation and playable demo!](https://tmseldon.itch.io/silentwings-2491/devlog/405077/final-implementation-and-playable-demo)
 - [Demo version playable!](https://tmseldon.itch.io/silentwings-2491/devlog/404804/demo-version-playable)
 - [Strange behaviour with AddListener inside a loop](https://tmseldon.itch.io/silentwings-2491/devlog/404215/strange-behaviour-with-addlistener-inside-a-loop)
